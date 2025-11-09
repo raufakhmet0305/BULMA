@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bulma.min.css">
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="home.html"><strong>INTEL</strong></a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+
+    <div class="navbar-end">
+          <a class="navbar-item">
+        <a href="home.html" class="navbar-item">Home</a>
+      </a>
+
+      <a class="navbar-item">
+        <a href="news.html" class="navbar-item">News</a>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item"> 
+           <a href="about.html" class="navbar-item">About</a>
+          </a>
+          <a class="navbar-item">
+           <a href="contact.html" class="navbar-item">Contact</a>
+          </a>
+          <hr class="navbar-divider">
+        </div>
+      </div>
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-primary">
+            <strong>Sign up</strong>
+          </a>
+          <a class="button is-light">
+            Log in
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+   <section class="hero is-link is-medium">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">Новости INTEL</h1>
+        <h2 class="subtitle">Все события, технологии и акции компании</h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- Фильтры -->
+  <section class="section">
+    <div class="container">
+      <div class="buttons has-addons is-centered" id="filterButtons">
+        <button class="button is-link is-light" data-category="all">Все</button>
+        <button class="button is-light" data-category="company">Компания</button>
+        <button class="button is-light" data-category="tech">Технологии</button>
+        <button class="button is-light" data-category="promo">Акции</button>
+        <button class="button is-light" data-category="partners">Сотрудничество</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Сетка новостей -->
+  <section class="section">
+    <div class="container">
+      <div class="columns is-multiline" id="newsGrid">
+
+        <!-- Пример карточки -->
+        <div class="column is-one-third" data-category="tech">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="https://avatars.mds.yandex.net/i?id=8e01469078b37f87d3d35f928c4e69836f852197-6250997-images-thumbs&n=13" alt="5G ASTEL">
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="title is-5">INTEL запускает 5G в Алматы</p>
+              <p>Началось тестирование сети нового поколения.</p>
+              <p class="has-text-grey-light">07 ноября 2025</p>
+              <button class="button is-small is-link is-light open-modal" data-target="modal1">Подробнее</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-one-third" data-category="company">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="https://avatars.mds.yandex.net/i?id=b44496da55d44f00cca3e951d869201798cf286b-17392673-images-thumbs&n=13" alt="Школы">
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="title is-5">Интернет для школ</p>
+              <p>Бесплатное подключение 200 сельских школ.</p>
+              <p class="has-text-grey-light">01 ноября 2025</p>
+              <button class="button is-small is-link is-light open-modal" data-target="modal2">Подробнее</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-one-third" data-category="promo">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="https://avatars.mds.yandex.net/i?id=96004a5f903f0e5c1949f8b49d92fe3f29fd19f5-16349001-images-thumbs&n=13" alt="Акция">
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="title is-5">Новый тариф “Бизнес+”</p>
+              <p>Выгодное решение для предпринимателей.</p>
+              <p class="has-text-grey-light">25 октября 2025</p>
+              <button class="button is-small is-link is-light open-modal" data-target="modal3">Подробнее</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-one-third" data-category="partners">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="https://avatars.mds.yandex.net/i?id=c0689437436fbb888ebcf9b042afd83df263d768-10115334-images-thumbs&n=13" alt="Партнерство">
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="title is-5">Партнёрство с Казахтелеком</p>
+              <p>Совместные проекты в сфере цифровизации.</p>
+              <p class="has-text-grey-light">20 октября 2025</p>
+              <button class="button is-small is-link is-light open-modal" data-target="modal4">Подробнее</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-one-third" data-category="tech">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="https://avatars.mds.yandex.net/i?id=b0fe4d8d7b6ff68db27bb12c90badc3fe7c321f5-12714255-images-thumbs&n=13" alt="App">
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="title is-5">Обновление приложения INTEL</p>
+              <p>Новый дизайн и больше функций для пользователей.</p>
+              <p class="has-text-grey-light">18 октября 2025</p>
+              <button class="button is-small is-link is-light open-modal" data-target="modal5">Подробнее</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-one-third" data-category="company">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="https://avatars.mds.yandex.net/i?id=c158647b0be3170466622c88fb507ec7c284a95c-8497013-images-thumbs&n=13" alt="Эко проект">
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="title is-5">Эко-программа INTEL Green</p>
+              <p>Использование солнечных панелей на узлах связи.</p>
+              <p class="has-text-grey-light">10 октября 2025</p>
+              <button class="button is-small is-link is-light open-modal" data-target="modal6">Подробнее</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Подвал -->
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>© INTEL, 2025 | Все права защищены</p>
+    </div>
+  </footer>
+
+  <!-- Модальные окна -->
+  <div id="modal1" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content box">
+      <h3 class="title is-4">INTEL запускает 5G в Алматы</h3>
+      <p>Компания INTEL начала тестирование сети 5G, предоставляя клиентам беспрецедентную скорость соединения. 
+      В будущем проект будет расширен на другие города Казахстана.</p>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+  <div id="modal2" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content box">
+      <h3 class="title is-4">Интернет для школ</h3>
+      <p>Более 200 сельских школ подключены к интернету бесплатно в рамках социальной программы INTEL EducationNet.</p>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+  <div id="modal3" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content box">
+      <h3 class="title is-4">Новый тариф “Бизнес+”</h3>
+      <p>Предлагаем оптимальное решение для предпринимателей: скорость до 500 Мбит/с и персональный менеджер.</p>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+  <div id="modal4" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content box">
+      <h3 class="title is-4">Партнёрство с Казахтелеком</h3>
+      <p>Компании INTEL и Казахтелеком объявили о совместном проекте по развитию сети в регионах.</p>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+  <div id="modal5" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content box">
+      <h3 class="title is-4">Обновление приложения INTEL</h3>
+      <p>Новая версия приложения INTEL доступна в App Store и Google Play. Усовершенствован интерфейс и добавлены виджеты для быстрого доступа к услугам.</p>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+  <div id="modal6" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content box">
+      <h3 class="title is-4">Эко-программа INTEL Green</h3>
+      <p>INTEL внедряет солнечные панели для снижения энергопотребления и выбросов CO₂, делая связь “зелёной”.</p>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+</body>
+</html>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+  // Фильтрация новостей
+      const buttons = document.querySelectorAll('#filterButtons .button');
+      const cards = document.querySelectorAll('#newsGrid .column');
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          buttons.forEach(b => b.classList.remove('is-link', 'is-light'));
+          buttons.forEach(b => b.classList.add('is-light'));
+          btn.classList.add('is-link', 'is-light');
+          const cat = btn.dataset.category;
+          cards.forEach(card => {
+            card.style.display = (cat === 'all' || card.dataset.category === cat) ? 'block' : 'none';
+          });
+        });
+      });
+
+      // Модальные окна
+      const modals = document.querySelectorAll('.modal');
+      const openers = document.querySelectorAll('.open-modal');
+      const closers = document.querySelectorAll('.modal-close, .modal-background');
+
+      openers.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const modal = document.getElementById(btn.dataset.target);
+          modal.classList.add('is-active');
+        });
+      });
+
+      closers.forEach(btn => {
+        btn.addEventListener('click', () => {
+          modals.forEach(m => m.classList.remove('is-active'));
+        });
+      });
+    });
+  </script>
+ <script src="./js/script.js"></script>
+</body>
+</html>
